@@ -1,3 +1,8 @@
+<?php
+session_start();
+$postkey= md5(rand(1,100000));
+$_SESSION['postkey'] = $postkey;
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -16,7 +21,7 @@
             <div class="row">
                 <div class="col-4-md panel">
                     <div class="">
-                        <h1>File Upload
+                        <h1>File Upload 
                         </h1>
                         <hr/>
                         <form id="upload-form">
@@ -24,6 +29,7 @@
                                 Enter Password to Encrypt Files</label>
                             <br>
                                 <input type="password" id="password" class="text-field"/>
+                                <input type="hidden" id="postkey" value="<?=$postkey?>" />
                                 <hr/>
                                 <label>
                                     Upload File</label>
@@ -36,6 +42,7 @@
                                     <button class="button col" id="btn-upload">UPLOAD</button>
                                 </div>
                             </div>
+                            <div id="message"></div>
                         </form>
                     </div>
                 </div>
@@ -56,6 +63,7 @@
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/bower_components/crypto-js/crypto-js.js"></script>
         <script src="/assets/js/main.js"></script>
 
     </body>

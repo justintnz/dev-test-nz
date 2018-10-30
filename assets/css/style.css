@@ -42,6 +42,7 @@ red e33c43
   height: 400px;
   display: flex;
   text-align: left;
+  padding: 50px 50px 0 50px;
 }
 
 .status {
@@ -52,7 +53,10 @@ red e33c43
   padding-top: 50px;
   line-height: 30px;
 }
-
+.status .container {
+  max-height: 270px;
+  overflow: hidden;
+}
 .status .title {
   font-size: 18px;
   font-weight: bold;
@@ -101,4 +105,59 @@ red e33c43
   font-size: 0.8rem;
   height: 32px;
   background-color: white;
+}
+
+#btn-browse {
+  margin-right: 10px;
+}
+#upload-name {
+  background-color: #eee;
+  color: grey;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#message {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.progress {
+  height: 10px;
+  top: 10px;
+  position: relative;
+  background-color: #555;
+  border-radius: 25px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.progress > span {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #ddd;
+  background-image: linear-gradient(to bottom, #ddd, #ddd);
+  position: relative;
+  overflow: hidden;
+}
+
+.orange > span {
+  background-color: #f1a165;
+  background-image: linear-gradient(to bottom, #f1a165, #f36d0a);
+}
+
+.red > span {
+  background-color: #f0a3a3;
+  background-image: linear-gradient(to bottom, #f0a3a3, #f42323);
+}
+
+.orange > span {
+  background-color: #f1a165;
+  background-image: linear-gradient(to bottom, #f1a165, #f36d0a);
+}
+
+.green > span {
+  background-color: #a3f0a3;
+  background-image: linear-gradient(to bottom, #a3f0a3, #23f423);
 }
