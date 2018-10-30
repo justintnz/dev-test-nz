@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Source Sans Pro Bold";
+  src: url("/assets/fonts/SourceSansPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Regular";
+  src: url("/assets/fonts/SourceSansPro-Regular.otf") format("opentype");
+}
+
+h1 {
+  font-family: "Source Sans Pro Bold";
+  font-size: 32px;
+  line-height: 32px;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  background-color: #3c3c3c;
+}
+body,
+label,
+p,
+input,
+button {
+  font-family: "Source Sans Pro Regular";
+  font-size: 16px;
+  color: #333;
+}
+/*
+green 59f5a4
+red e33c43
+*/
+.panel {
+  background-color: white;
+  border-radius: 20px 0 0 20px;
+  height: 400px;
+  display: flex;
+  text-align: left;
+}
+
+.status {
+  background-color: #505050;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  padding-top: 50px;
+  line-height: 30px;
+}
+
+.status .title {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+.status .head {
+  font-weight: bold;
+}
+.status .row {
+  margin: 5px 0;
+  font-size: 14px;
+  background-color: #333;
+  border-radius: 5px;
+}
+/* hidding input File */
+#upload-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.text-field {
+  border-radius: 8px;
+  line-height: 24px;
+  padding: 3px 20px;
+  border: solid #ccc 1px;
+  box-shadow: 1px 2px inset #ccc;
+  width: 280px;
+  height: 32px;
+  background-color: #f1f1f1;
+}
+.filename,
+.datetime {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.button {
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 8px;
+  border: solid #ccc 1px;
+  box-shadow: 1px 2px #ccc;
+  font-size: 0.8rem;
+  height: 32px;
+  background-color: white;
+}
